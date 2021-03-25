@@ -12,15 +12,31 @@
         span {
             margin-top: 5px;
         }
+        #wrap img {
+            margin: 20px;
+        }
 
+        #carousel {
+            margin-left: 147px;
+        }
+
+        #description div {
+            display: inline-block;
+            width: 106px;
+            text-align: justify;
+            margin: 0px 21px;
+        }
+        
     </style>
 </head>
 <body>
     <div id="wrap"></div>
     <div id="description"></div>
-    <button id="prev" type="button">&lt</button>
-    <span id="page">1/3</span>
-    <button id="next" type="button">&gt</button>
+    <div id="carousel">
+        <button id="prev" type="button">&lt</button>
+        <span id="page">1/3</span>
+        <button id="next" type="button">&gt</button>
+    </div>
 
 <script>
     var todayPhoto = [
