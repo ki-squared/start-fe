@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4주차 과제 - 1</title>
+    <style>
+        button, span {
+            margin: 10px;
+            float: left;
+        }
+        span {
+            margin-top: 5px;
+        }
 
+    </style>
 </head>
 <body>
     <div id="wrap"></div>
+    <div id="description"></div>
     <button id="prev" type="button">&lt</button>
+    <span id="page">1/3</span>
     <button id="next" type="button">&gt</button>
-    
+
 <script>
     var todayPhoto = [
         {"url":"http://media.daum.net/photo/2841","img":"http://icon.daumcdn.net/w/c/12/05/82877085750988319.jpeg","title":"&quot;뜨면 끝장&quot; 최강 공격헬기 성능이 설마","id":"20120516082207657"}
@@ -24,30 +35,35 @@
     ];
 
     var wrap = document.getElementById('wrap');
+    var description = document.getElementById('description');
+    var page = document.getElementById('page');
     var prev = document.getElementById('prev');
     var next = document.getElementById('next');
+
     // page number
     var pNum = 1;
     // last page number
     var lpNum = Math.ceil(todayPhoto.length/3); // Math.ceil은 소숫점 올림
 
-    var str = '';
-    for(var i=0; i<todayPhoto.length; i++) {
-        str += '<img src="'+todayPhoto[i].img+'"> ';
-    }
-    wrap.innerHTML = str;
 
     // 현재 페이지 pNum에 맞게 3개의 사진을 보여주는 함수
     function show() {
         // 012 345 678 ... => first picture idx=(page number -1)*3
         var first = (pNum-1)*3;
-        var str = '';
+        var iStr = ''; // img 
+        var dStr = ''; // description
+        var pStr = ''; // page
         for(var i=first; i<first+3; i++) {
             if(i==todayPhoto.length) // 사진이 반드시 3의 배수가 아닐 수도 있기 때문.. 없으면 오류!
                 break;
-            str += '<img src="'+todayPhoto[i].img+'"> ';
+            iStr += '<img src="'+todayPhoto[i].img+'">';
+            dStr += '<div id="description">'+todayPhoto[i].title+'</div>'; 
         }
-        wrap.innerHTML = str;
+        pStr = '<span id="page-number">'+pNum+'/3</span>';
+        wrap.innerHTML = iStr;
+        description.innerHTML = dStr;
+        page.innerHTML = pStr;
+
     }
 
     show();
