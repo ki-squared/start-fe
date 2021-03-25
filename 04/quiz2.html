@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4주차 과제 - 2</title>
+    <style>
+        #board {
+            width: 400px;
+            height: 400px;
+        }
+
+        .black {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: black;
+            float: left;
+        }
+
+        .white {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: white;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="board">
+        <!-- 이 HTML을 자바스크립트로 추가하면 됩니다.
+          <span class="black"></span>
+          <span class="white"></span>
+          <span class="black"></span>
+          <span class="white"></span>
+          <span class="white"></span>
+          <span class="black"></span>
+          <span class="white"></span>
+          <span class="black"></span>
+          <span class="black"></span>
+          <span class="white"></span>
+          <span class="black"></span>
+          <span class="white"></span>
+          <span class="white"></span>
+          <span class="black"></span>
+          <span class="white"></span>
+          <span class="black"></span>
+        //-->
+    </div>
+
+<script>
+    var board = document.getElementById('board');
+    var str = '';
+
+    // 00 01 02 03    0 1 2 3 eoeo  ( e => black / o => white )
+    // 10 11 12 13    1 2 3 4 oeoe
+    // 20 21 22 23    2 3 4 5 eoeo
+    // 30 31 32 33    3 4 5 6 oeoe
+
+    for(var i=0; i<4; i++) {
+        for(var j=0; j<4; j++) {
+            if((i+j)%2==0)
+                str += '<span class="black"></span>';
+            else
+                str+= '<span class="white"></span>';
+        }
+    }
+
+    board.innerHTML = str;
+
+    var squares = document.querySelectorAll('span');
+    board.addEventListener('click', function(event) {
+        if(event.target.nodeName=='SPAN') {
+            var target = event.target;
+            // refresh colors
+            squares.forEach(function(square) {
+                if(square.style.backgroundColor == 'red')
+                    square.style.backgroundColor = square.className;
+            })
+            // color the clicked target red
+            target.style.backgroundColor = 'red';
+        }
+    });
+
+</script>
+
+</body>
+</html>

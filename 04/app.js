@@ -57,3 +57,51 @@ const span = document.createElement('span');
 const textNode = document.createTextNode('HI!!');
 span.appendChild(textNode);
 document.querySelector('#debug').appendChild(span);
+
+/* DOM 제거 */
+/* .remove() */
+const debug3 = document.getElementById('debug');
+debug3.remove(); // 오호 옴총 간단하군!
+/* .removeChild() */
+const list = document.getElementById('list');
+list.removeChild(list.children[0]); // ul인 list 아래 두 li 중 첫 li 제거
+
+
+
+
+/* Event */
+// window.addEventListener('load', function(){
+//     alert("load");
+// }); // DOM 레벨2(권장)
+
+// document.addEventListener('click', function(){
+//     console.log('clicked');
+// });
+
+var clickCnt = 0;
+function popup(event) {
+    console.log(++clickCnt);
+    console.log(arguments, this, event, event.type, event.currentTarget);
+}
+document.body.addEventListener('click', popup);
+
+var app = document.getElementById('list');
+app.addEventListener('click', function(event){
+    if(event.target.nodeName=="LI") { // list 하위에 있는 모든 li에 대해! for문 활용할 필요 없음~!
+        console.log(1);
+    }
+});
+
+/* 이벤트 중지 - 이벤트 중첩 등의 상황에서 */
+// EventListner 함수 안에서 마지막에 
+// event.stopPropagation();
+
+var cnt=0;
+var link3 = document.querySelector('#link');
+link3.addEventListener('click', function() {
+    console.log(++cnt);
+    event.preventDefault(); // 링크로 이동하는 동작을 수행하지 않는다!
+});
+
+
+
