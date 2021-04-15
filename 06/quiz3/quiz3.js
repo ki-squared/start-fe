@@ -2,6 +2,8 @@ let $boxes = document.querySelectorAll('.box');
 const $body = document.querySelector('body');
 const $text = document.querySelector('.txt');
 
+const src = "https://i.imgur.com/69NjYBH.png";
+
 // buttons
 const $addRed = document.querySelector('.add-red');
 const $addBtn = document.querySelector('.add-btn');
@@ -73,9 +75,8 @@ $toggleBtn.addEventListener('click', (event) => {
 $imageBtn.addEventListener('click', (event) => {
     if($boxes.length === 0)  addBox();
     Array.prototype.forEach.call($boxes, function(box) {
-        const img = document.createElement('img');
-        img.src = 'https://imgur.com/69NjYBH';
-        box.appendChild(img);
+        let str = `<img src = " ${src} ">`;
+        box.innerHTML = str;
     });
 });
 
