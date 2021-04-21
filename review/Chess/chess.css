@@ -1,0 +1,19 @@
+#board {
+    width :400px;
+    height: 400px;
+}
+
+span {
+    width: 100px;
+    height: 100px;
+    display: block;
+    float: left;
+}
+
+.black {
+    background: black;
+}
+
+.white {
+    background: white;
+}
