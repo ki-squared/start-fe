@@ -1,0 +1,5 @@
+curl -v -X GET "https://dapi.kakao.com/v2/search/vclip" \
+--data-urlencode "query=AOA" \
+-H "Authorization: KakaoAK cb647de7fb445740354de8a82993de38"
+
+이를 터미널에서 실행시키면 결과가 반환되는데, json형태로 반환된다. 
