@@ -1,24 +1,27 @@
 {
   "name": "todo-app",
   "version": "1.0.0",
-  "description": "> 간단한 Todo 리스트 관리 웹어플리케이션을 만들어 본다",
+  "description": "TO-DO App",
   "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
+  "dependencies": {
     "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "^2.23.3",
-    "prettier": "^2.3.0",
-    "webpack": "^5.37.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.3"
   },
-  "keywords": [],
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^4.4.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "keywords": []
 }
