@@ -44,8 +44,6 @@ Web Programming 수업 노트 : [Personal Notion](https://www.notion.so/Web-Prog
 
         : Number
 
-        ![Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__1.15.07.png](Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__1.15.07.png)
-
         : String, Boolean
 
         : String "true"는 if 문에서 저절로 Boolean 형 true로 변환된다. 
@@ -166,8 +164,6 @@ Web Programming 수업 노트 : [Personal Notion](https://www.notion.so/Web-Prog
 
         - 모든 연산자
 
-            [https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)
-
 - 수업 3 - JS 기본 2
     1. **객체**
 
@@ -183,8 +179,6 @@ Web Programming 수업 노트 : [Personal Notion](https://www.notion.so/Web-Prog
         : JSON → { ... }; 부분
 
         - 기본 프로퍼티, 메소드 → Object에서 상속받은 프로퍼티와 메소드
-
-            ![Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__2.55.50.png](Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__2.55.50.png)
 
             1. Constructor(생성자 함수)
 
@@ -357,7 +351,6 @@ Web Programming 수업 노트 : [Personal Notion](https://www.notion.so/Web-Prog
             alert('안녕하세요');
             ```
 
-            ![Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__5.35.36.png](Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__5.35.36.png)
 
             window 라는 브라우저 최상위에 속한 객체의 메서드
 
@@ -367,11 +360,7 @@ Web Programming 수업 노트 : [Personal Notion](https://www.notion.so/Web-Prog
             var who = prompt('당신은 누구세요');
             ```
 
-            ![Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__5.37.32.png](Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__5.37.32.png)
-
         - confirm
-
-            ![Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__5.39.15.png](Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-09__5.39.15.png)
 
             ```jsx
             confirm('정말 삭제하시겠습니까?');
@@ -438,7 +427,6 @@ Web Programming 수업 노트 : [Personal Notion](https://www.notion.so/Web-Prog
         car.starting();
         ```
 
-        : [https://start-fe.surge.sh/js/function.html#여러가지-함수모양](https://start-fe.surge.sh/js/function.html#%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80-%ED%95%A8%EC%88%98%EB%AA%A8%EC%96%91)
 
         - 가변길이 전달인자→ arguments 활용
 
@@ -584,6 +572,5 @@ Web Programming 수업 노트 : [Personal Notion](https://www.notion.so/Web-Prog
 
         : click, mouseover, load, mouseout, unload, change, submit, focus, blur, error, keypress, DOMContentLoaded, touchstart 등
 
-        ![Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-25__5.17.04.png](Kakao%20Track%20-%20Web%20Programming%20670ac952130a443584b7989f178379fa/_2021-03-25__5.17.04.png)
 
 - 수업 5 - 실습과제
