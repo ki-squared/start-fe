@@ -1,5 +1,9 @@
 # Todo List 
 
+배포 URL?
+ - Local:  [http://localhost:5000](http://localhost:5000)
+ - On Your Network:  [http://192.168.200.189:5000](http://192.168.200.189:5000) 
+
 - 환경설정
     - Prettier
 
