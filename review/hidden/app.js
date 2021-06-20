@@ -1,6 +1,6 @@
-const popularURL = "/popular.json";
-const recentURL = "/recent.json";
-const viewURL = "/view.json";
+const popularURL = "./popular.json";
+const recentURL = "./recent.json";
+const viewURL = "./view.json";
 const loadingTime = 1000; // 1초
 const loadPageLength = 10;
 let loadedPageNumber = 0;
